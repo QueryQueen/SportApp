@@ -1,0 +1,25 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd">
+<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns:th="http://www.thymeleaf.org">
+<head>
+<!-- Compressed CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/foundation/6.2.3/foundation.min.css" />
+<title> De SportPagina!</title>
+</head>
+
+<body>
+<div class="row">
+<h1> Welkom op de sportpagina &hearts; </h1> </div>
+
+<h2> Voer je sport in </h2>
+<form th:object="${sport}" th:action="saveSport" method ="post">
+<input type="text" th:field="*{land}" placeholder="land"/>
+<input type="text" th:field="*{sportNaam}" placeholder="sport"/>
+<input type="number" th:field="*{highscore}" placeholder="Highscore"/>
+<input type="submit" value="Submit"/>
+</form>
+
+<!-- Compressed JavaScript -->
+<script src="https://cdn.jsdelivr.net/foundation/6.2.3/foundation.min.js"></script>
+</body>
+
+</html>
